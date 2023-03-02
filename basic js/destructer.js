@@ -26,10 +26,25 @@ const users = {
 const { user2: { name: changedName, age: changedAge } } = users;
 
 //destructure with arrays
-const [a, b] = [1, 2, 3, 4, 5];
+var [a, b] = [1, 2, 3, 4, 5];
 //a=1, b=2
 console.log(a, b);
 
 //a=1,b=2
 [b, a] = [a, b]
 console.log(a, b)
+
+//arr2=[1,2,3,4,5]
+const [c, d, ...arr2] = [1, 2, 3, 4, 5];
+console.log(arr2)
+
+//destructured parameter
+const obj = {
+    attri1: 1,
+    attri2: 100,
+    attri3: 100000
+}
+const avg = ({ attri1, attri2, attri3 }) => {
+    return (attri1 + attri2 + attri3) / 3
+}
+console.log("avg= ", avg(obj))
