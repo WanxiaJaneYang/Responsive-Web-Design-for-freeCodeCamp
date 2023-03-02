@@ -1,17 +1,20 @@
 class Student {
-    constructor(name, age, sex) {
+    constructor(name, age) {
         this.name = name;
         this.age = age;
-        this.sex = sex;
     }
 
     get name() {
-        return this.name;
+        return this._name;
     }
+
     set name(name) {
-        this.name = name
+        this._name = name;
     }
 }
 
-var pgStudentA = new Student("Dan", 3, "male");
-console.log(pgStudentA)
+
+var studentA = new Student("Dam", 3);
+
+//Student{_name:'Dam', age:3}
+console.log(studentA)
