@@ -50,3 +50,9 @@ let result7 = hello.replace(wsRegex, '');
 let repeatNum = "42 42 42 42";
 let reRegex = /^(\d+) \1 \1$/; // same number appears three times, \1 refers to the first string match the pattern
 let result8 = reRegex.test(repeatNum);
+
+//Use lookaheads in the pwRegex to match passwords that are greater than 5 characters long, and have two consecutive digits.
+let sampleWord = "astronaut";
+//the first lookahead check if the string has more than 5 characters, the second lookahead check if there is two consecutive numbers
+let pwRegex = /(?=\w{6})(?=.*\d{2})/;
+let result9 = pwRegex.test(sampleWord);
