@@ -40,3 +40,13 @@ Usernames have to be at least two characters long. A two-character username can 
 let username = "JackOfAllTrades";
 let userCheck = /(^[a-z][0-9]{2,}$)|(^[a-z]{2,}+[0-9]*$)/i;
 let result6 = userCheck.test(username);
+
+//use regex to remove blankspace at the beginning and at the end
+let hello = "   Hello, World!  ";
+let wsRegex = /^\s*|\s*$/g;
+let result7 = hello.replace(wsRegex, '');
+
+//use capture groups to match patterns for multiple times
+let repeatNum = "42 42 42 42";
+let reRegex = /^(\d+) \1 \1$/; // same number appears three times, \1 refers to the first string match the pattern
+let result8 = reRegex.test(repeatNum);
